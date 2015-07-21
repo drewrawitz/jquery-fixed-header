@@ -43,7 +43,7 @@
       $contentElement.css('padding-top', headerHeight);
     }
 
-    $(window).on('resize', function () {
+    $(window).resize(function() {
       // if the height of the header has changed
       if (parseInt($contentElement.css('padding-top')) !== $this.outerHeight()) {
 
