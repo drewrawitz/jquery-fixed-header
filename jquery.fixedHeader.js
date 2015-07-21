@@ -19,7 +19,7 @@
     // Default options
     var defaults = {
       contentElement: 'body',
-      class: 'fixed-header'
+      class: null
     };
 
     var opts = $.extend(true, {}, defaults, options);
@@ -33,7 +33,13 @@
 
     // Only execute if this element exists on the page
     if (this.length) {
-      this.addClass(opts.class);
+
+      // add the class if specified
+      if (opts.class) {
+        this.addClass(opts.class);
+      }
+
+      // pad the content element
       $contentElement.css('padding-top', headerHeight);
     }
 
