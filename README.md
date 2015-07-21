@@ -6,15 +6,16 @@ This will work on responsive websites where the height of the header may change.
 ## Using jQuery.fixedHeader.js
 Use the plugin like so:
 
-    <script>
-    $(window).load(function () {
-      $("#primary-header").fixedHeader({
-        contentElement: "body",
-        class: "fixed-header"
-      });
+```js
+<script>
+  $(window).load(function () {
+    $("#primary-header").fixedHeader({
+      contentElement: "body",
+      class: "fixed-header"
     });
-    </script>
-
+  });
+</script>
+```
 There are two options to include:
 
 * `contentElement` -- The element that should be padded down (default: 'body' )
