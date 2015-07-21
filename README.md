@@ -5,9 +5,9 @@ This will work on responsive websites where the height of the header may change.
 
 ## Installation
 
-Include [jQuery](http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js) and the `jquery.fixedHeader.js` script:
+Include [jQuery](http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js) and the `jquery.fixedHeader.js` script:
 ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 <script src="jquery.fixedHeader.js"></script>
 ```
 
