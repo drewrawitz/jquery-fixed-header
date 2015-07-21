@@ -3,6 +3,8 @@ A jQuery Plugin to fix a header to the top of the window and pad down the conten
 
 This will work on responsive websites where the height of the header may change.
 
+[See Demo](http://drewrawitz.github.io/demo/jquery-fixed-header/)
+
 ## Installation
 
 Include [jQuery](http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js) and the `jquery.fixedHeader.js` script:
