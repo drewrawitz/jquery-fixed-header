@@ -27,13 +27,15 @@ Use the plugin like so:
   $(window).load(function () {
     $("#primary-header").fixedHeader({
       contentElement: "body",
-      class: "fixed-header"
+      class: "fixed-header",
+      breakpoint: 400
     });
   });
 </script>
 ```
-There are two options to include:
+There are three options to include:
 
-* `contentElement` -- The element that should be padded down (default: 'body' )
-* `class` -- An optional class that will be applied to the element this plugin is being used on (default: null)
+* `contentElement` -- **string**: The element that should be padded down (default: 'body' )
+* `class` -- **string**: An optional class that will be applied to the element this plugin is being used on (default: null)
+* `breakpoint` -- **integer**: An optional breakpoint that you can use. The fixed header will not be applied if the browser width is less than this value (default: null)
 
