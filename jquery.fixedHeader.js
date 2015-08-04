@@ -9,6 +9,7 @@
  * Options:
  *  - Content Element (string)
  *  - Class (string)
+ *  - Breakpoint (integer)
  * ========================================================== */
 
 (function ($) {
@@ -19,7 +20,8 @@
     // Default options
     var defaults = {
       contentElement: 'body',
-      class: null
+      class: null,
+      breakpoint: null
     };
 
     var opts = $.extend(true, {}, defaults, options);
@@ -31,24 +33,43 @@
     // If the Content Element defined does not exist, revert back to the default body tag
     var $contentElement = ( $(opts.contentElement).length ) ? $(opts.contentElement) : $(defaults.contentElement);
 
-    // Only execute if this element exists on the page
-    if (this.length) {
-
+    // Function to execute the commands
+    var execute = function(el) {
       // add the class if specified
       if (opts.class) {
-        this.addClass(opts.class);
+        el.addClass(opts.class);
       }
 
       // pad the content element
       $contentElement.css('padding-top', headerHeight);
     }
 
-    $(window).resize(function() {
-      // if the height of the header has changed
-      if (parseInt($contentElement.css('padding-top')) !== $this.outerHeight()) {
+    // Only execute if this element exists on the page
+    if ($this.length) {
 
-        // then let's set the padding-top value to the new header height
-        $contentElement.css('padding-top', $this.outerHeight());
+      if (!opts.breakpoint || $(window).width() >= opts.breakpoint) {
+        execute($this);
+      }
+    }
+
+    $(window).on('resize', function () {
+      if (opts.breakpoint && $(window).width() <= opts.breakpoint) {
+        // remove the inline style
+        $contentElement.css('padding-top', '');
+
+        // remove the custom class
+        if (opts.class) {
+          $this.removeClass(opts.class);
+        }
+      } else {
+        execute($this);
+
+        // if the height of the header has changed
+        if (parseInt($contentElement.css('padding-top')) !== $this.outerHeight()) {
+
+          // then let's set the padding-top value to the new header height
+          $contentElement.css('padding-top', $this.outerHeight());
+        }
       }
     });
 
