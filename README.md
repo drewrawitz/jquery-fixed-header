@@ -39,3 +39,13 @@ There are three options to include:
 * `class` -- **string**: An optional class that will be applied to the element this plugin is being used on (default: null)
 * `breakpoint` -- **integer**: An optional breakpoint that you can use. The fixed header will not be applied if the browser width is less than this value (default: null)
 
+### CSS
+Make sure you have the appropriate styles in your stylesheet for when your class gets applied.  If you choose to add a class called **fixed-header**, then you should have something like this:
+
+```css
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+```
