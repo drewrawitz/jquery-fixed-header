@@ -48,4 +48,5 @@ Make sure you have the appropriate styles in your stylesheet for when your class
   top: 0;
   left: 0;
   width: 100%;
+}
 ```
