@@ -47,6 +47,7 @@ Make sure you have the appropriate styles in your stylesheet for when your class
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   width: 100%;
 }
 ```
