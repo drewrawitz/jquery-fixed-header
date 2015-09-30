@@ -42,7 +42,7 @@
 
       // pad the content element
       $contentElement.css('padding-top', headerHeight);
-    }
+    };
 
     // Only execute if this element exists on the page
     if ($this.length) {
